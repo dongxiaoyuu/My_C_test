@@ -1,1 +1,2 @@
 D:\Develop\C_Develop\MY_FirstC_test\Debug\MY_FirstC_test.exe
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\Debug\MY_FirstC_test.exe
