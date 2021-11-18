@@ -1,2 +1,5 @@
 ﻿  hello.c
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(145,6): warning C4101: “a”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(146,6): warning C4101: “b”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(147,6): warning C4101: “c”: 未引用的局部变量
   MY_FirstC_test.vcxproj -> D:\Develop\C_Develop\My_C_test\MY_FirstC_test\Debug\MY_FirstC_test.exe
