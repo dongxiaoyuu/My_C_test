@@ -1,5 +1,8 @@
 ﻿  hello.c
-D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(145,6): warning C4101: “a”: 未引用的局部变量
-D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(146,6): warning C4101: “b”: 未引用的局部变量
-D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(147,6): warning C4101: “c”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(268,12): warning C4047: “return”:“int”与“int *”的间接级别不同
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(280,6): warning C4101: “a”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(281,6): warning C4101: “b”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(283,6): warning C4101: “data”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(282,6): warning C4101: “c”: 未引用的局部变量
+D:\Develop\C_Develop\My_C_test\MY_FirstC_test\hello.c(246): warning C4716: “Print”: 必须返回一个值
   MY_FirstC_test.vcxproj -> D:\Develop\C_Develop\My_C_test\MY_FirstC_test\Debug\MY_FirstC_test.exe

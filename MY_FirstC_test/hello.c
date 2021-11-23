@@ -2,6 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<math.h>
+#include<stdlib.h>
 
 
 //比大小
@@ -136,13 +137,195 @@ void Multi_tab() {
 		printf("\n");
 	}
 }
+//1-100猜数字
+void Game(){
+	int data = rand()%100+1;
+	int x;
+	while (1) {
+		printf("猜一个1-100之间的数:\n");
+		scanf("%d",&x);
+		if (x > data) {
+			printf("猜大了\n");
+		}
+		else if (x < data) {
+			printf("猜小了\n");
+		}
+		else {
+			printf("猜对了，这个数就是%d\n", data);
+			break;
+		}
+	}
 
+}
+//查找有序数组中的数字
+int Search(int data) {
+	int arr[10] = {1,3,5,7,8,13,16,17,23,45};
+	int count = 0;
+	for (int i = 0; i < 10; i++) {
+
+		if (arr[i] != data) {
+			count++;			
+			continue;
+		}
+		else {
+			printf("找到了，是数组中的第%d个数", i + 1);
+			break;	
+			
+			}
+		
+		}
+	if (count == 10) {
+		printf("数据不存在");
+	}
+	return 0;
+}
+//交换两个整数的内容
+void Change() {
+	int a = 67;
+	int b = 76;
+	printf("交换前a=%d,b=%d\n", a, b);
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+	printf("交换后a=%d,b=%d\n", a, b);
+}
+//输出自定义行列数的乘法表
+int Custom_multi_tab(int a) {
+	for (int i = 1; i <=a; i++) {
+		for (int j = 1; j <=a; j++) {
+			printf("%d * %d = %2d      ", i, j, i * j);
+
+		}
+		printf("\n");
+	}
+	return 0;
+}
+//冒泡排序--从小到大
+int Bubble_sort(int arr[],int num) {
+
+
+	int temp = 0;
+	for (int i = 0; i < num-1; i++) {
+		for (int j = 0; j < num-i-1; j++) {
+			if (arr[j] > arr[j + 1]) {
+				temp=arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;		
+
+			}
+		}
+	}
+	printf("\n排好后：");
+	for (int k = 0; k < num; k++) {
+		printf("%d ", arr[k]);
+	}
+	return 0;
+}
+// 数组操作----初始化\打印\逆置
+
+void Init(int arr[], int num) {
+
+	for (int i = 0; i < num; i++) {
+
+		arr[i] = 0;
+
+	}
+
+}
+
+int Print(int arr[], int num) {
+
+	for (int i = 0; i < num; i++) {
+
+		printf("%d ", arr[i]);
+
+	}
+
+	printf("\n");
+
+}
+
+int Reverse(int arr[], int num) {
+
+	int left = 0;
+
+	int right = num - 1;
+
+	while (left < right) {
+
+		int temp = arr[left];
+
+		arr[left] = arr[right];
+
+		arr[right] = temp;
+
+		left++;
+
+		right--;
+
+	}
+
+	return arr;
+
+}
+//交换数组
+void Swap_arr(int a[], int b[]) {
+	for (int i = 0; i < 10; i++) {
+		int temp = a[i];
+		a[i] = b[i];
+		b[i] = temp;
+	}
+}
 int main() {
 	int a;
 	int b;
 	int c;
+	int data;
 
-	Multi_tab();
+	
+	int arr1[] = { 7,2,3,33,0,65,34,34,100 };
+	int num = sizeof(arr1) / sizeof(arr1[0]);	
+	int arr2[] = { 1,2,3,4,5,6,7,8,9 };
+	printf("交换前：\n ");
+	printf("数组1:");
+	Print(arr1, 9);
+	printf("数组2：");
+	Print(arr2, 9);
+	printf("\n交换后：\n ");
+	Swap_arr(arr1, arr2);
+	printf("数组1:");
+	Print(arr1, 9);
+	printf("数组2：");
+	Print(arr2, 9);
+
+
+
+
+
+	/*Print(arr, num);
+	Reverse(arr, num);
+	Print(arr, num);*/
+
+
+	/*printf("排序前：");
+	for (int i = 0; i < num; i++) {
+		printf("%d ",arr[i]);
+	}
+	Bubble_sort(arr,num);*/
+
+	/*printf("你想看几乘几的乘法表:");
+	scanf("%d", &data);
+	Custom_multi_tab(data);*/
+
+
+	//Change();
+	/*printf("请输入想查找的数据:");
+	scanf("%d", &data);
+	Search(data);*/
+
+
+	//Game();
+	//Multi_tab();
 	//Ten_max();
 
 	//Add();
