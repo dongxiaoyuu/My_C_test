@@ -1,0 +1,8 @@
+﻿  my_strlen.c
+  test3.c
+D:\Develop\C_Develop\My_C_test\Test3\test3.c(51,15): warning C4047: “函数”:“const char *const ”与“int”的间接级别不同
+D:\Develop\C_Develop\My_C_test\Test3\test3.c(51,12): warning C4024: “printf”: 形参和实参 1 的类型不同
+D:\Develop\C_Develop\My_C_test\Test3\test3.c(64,5): warning C4098: “main”:“void”函数返回值
+  正在生成代码...
+test3.obj : error LNK2005: _MyStrlen 已经在 my_strlen.obj 中定义
+D:\Develop\C_Develop\My_C_test\Test3\Debug\Test3.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
