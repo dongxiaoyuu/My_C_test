@@ -125,7 +125,83 @@ void Reverse(char *str) {
 	}
 	printf("%s", str);
 }
-void main() {
+//strcpy的实现
+char* my_strcpy(char* dst, const char* src)
+{
+	char* cp = dst;
+	while (*cp++ = *src++);
+	return(dst);
+}
+//调整奇数偶数顺序:
+/*输入一个整数数组，实现一个函数，
+来调整该数组中数字的顺序使得数组中所有的奇数位于数组的前半部分，
+所有偶数位于数组的后半部分。*/
+void The_order(int arr[], int len) {
+	int left = 0;
+	int right = len - 1;
+	int temp = 0;
+	while (left < right)
+	{
+
+		while ((left < right) && (arr[left] % 2 == 1))
+		{
+			left++;
+		}
+
+
+		while ((left < right) && (arr[right] % 2 == 0))
+		{
+			right--;
+		}
+		if (left < right)
+		{
+			temp = arr[left];
+			arr[left] = arr[right];
+			arr[right] = temp;
+		}
+
+	}
+}
+
+//杨辉三角
+void Yang(int n) {
+	int data[30][30] = { 1 };
+	for (int i = 1; i < n; i++) //从第二行开始填
+	{
+		data[i][0] = 1; //每行的第一列都没有区别，直接给1，保证不会越界。
+		for (int j = 1; j <= i; j++) //从第二列开始填
+		{
+			data[i][j] = data[i - 1][j] + data[i - 1][j - 1]; //递推方程
+		}
+	}
+
+	for (int i = 0; i < n; i++) //填完打印
+	{
+		for (int j = 0; j <= i; j++)
+		{
+			printf("%d ", data[i][j]);
+		}
+		putchar('\n');
+	}
+}
+//猜凶手
+
+void Murderer() {
+	int murderer = 0;
+	for (murderer = 'a'; murderer <= 'd'; murderer++)
+	{
+		if ((murderer != 'a') + (murderer == 'c') + (murderer == 'd') + (murderer!= 'd') == 3)
+			printf("凶手是：%c", murderer);
+	}
+}
+
+//猜名次
+void Order() {
+
+}
+
+
+void main(){
 	/*int a, n;
 	printf("Please input 2 numbers:\n");
 	scanf("%d %d", &a, &n);
@@ -137,10 +213,25 @@ void main() {
 	//Drink();
 
 	/*int arr[10] = { 1,2,3,4,5,6,7,8,3,32 };
-	Print(arr, 10);*/
+	The_order(arr, 10);
+	for (int i = 0; i < 10; i++) {
+		printf("%d ", arr[i]);
+	}*/
 
 
-	char str[] = "hello world";	
-	Reverse(str);
+	/*char str[] = "hello world";	
+	char str2[] = "today today";
+	int my_str = my_strcpy(str, str2);
+	printf("str:%s\nstr2:%s", str, str2);*/
+
+	
+	//Reverse(str);
+
+
+	//Yang(10);
+
+	Murderer();
+
+
 
 }
