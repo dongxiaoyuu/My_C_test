@@ -1,0 +1,4 @@
+﻿  Recursion.c
+D:\Develop\C_Develop\My_C_test\Test3_Recursion\Recursion.c(28,23): warning C4013: “my_strlen”未定义；假设外部返回 int
+D:\Develop\C_Develop\My_C_test\Test3_Recursion\Recursion.c(45,18): warning C4013: “strlen”未定义；假设外部返回 int
+  Test3_Recursion.vcxproj -> D:\Develop\C_Develop\My_C_test\Test3_Recursion\Debug\Test3_Recursion.exe

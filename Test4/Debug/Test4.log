@@ -1,0 +1,4 @@
+﻿  test4.c
+D:\Develop\C_Develop\My_C_test\Test4\test4.c(35,31): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\Develop\C_Develop\My_C_test\Test4\test4.c(117,28): warning C4013: “strlen”未定义；假设外部返回 int
+  Test4.vcxproj -> D:\Develop\C_Develop\My_C_test\Test4\Debug\Test4.exe
