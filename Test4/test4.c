@@ -197,11 +197,31 @@ void Murderer() {
 
 //²ÂÃû´Î
 void Order() {
-
+	int person[5] = { 0 };
+	for (person[0] = 1; person[0] <= 5; person[0]++) {
+		for (person[1] = 1; person[0] <= 5; person[1]++) {
+			for (person[2] = 1; person[0] <= 5; person[2]++) {
+				for (person[3] = 1; person[0] <= 5; person[3]++) {
+					for (person[4] = 1; person[0] <= 5; person[4]++) {
+						if (((person[1] == 2) + (person[0] == 3)) == 1 &&
+							((person[1] == 2) + (person[0] == 4)) == 1 &&
+							((person[2] == 1) + (person[0] == 2)) == 1 &&
+							((person[2] == 5) + (person[0] == 3)) == 1 &&
+							((person[4] == 4) + (person[0] == 1)) == 1) {
+							if (person[0] * person[1] * person[2] * person[3] * person[4] == 120) {
+								printf("A:%d\nB:%d\nC:%d\nD:%d\nE:%d\n", person[0], person[1], person[2], person[3], person[4]);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
 void main(){
+	Order();
 	/*int a, n;
 	printf("Please input 2 numbers:\n");
 	scanf("%d %d", &a, &n);
@@ -230,7 +250,7 @@ void main(){
 
 	//Yang(10);
 
-	Murderer();
+	//Murderer();
 
 
 

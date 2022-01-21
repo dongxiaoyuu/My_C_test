@@ -58,8 +58,8 @@ void main() {
 
 	char arr[] = "hello world";
 	int res = my_strlen0(arr);
-	reverse_string(arr);
-	//printf("%d",res);
+	//reverse_string(arr);
+	printf("%d",res);
 
 	/*int res = Fac(5);
 	int res2 = Fac2(6);
